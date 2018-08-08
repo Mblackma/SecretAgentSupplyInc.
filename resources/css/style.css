@@ -2,7 +2,6 @@ html{
   font-size: 18px;
 color: white;
 font-family: Helvetica sans-serif;
-height: auto;
 background-color: white;
 }
 
@@ -13,41 +12,46 @@ background-color: white;
   margin-top: 0.66rem;
   margin-bottom: 0.66rem;
   margin-left: 0.5rem;
-  margin-right: 1rem;
+
 }
 .company .container{
   display: flex;
     align-items: center;
     padding: 12px 0 12px 0.5rem;
-}
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+
+    .company img{
+      height: 1.5rem;
+    }
 .main-banner{
-  background-image: url("C:\projects\secretagentsupply\resources\moto.jpeg");
+  background-image: url("../images/moto.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 25rem
+  height: 25rem;
 }
 .container{
     max-width: 960px;
     margin: 0 auto;
+    height: 100%;
 }
 .text-box{
-  background-color: black;
+background-color: black;
 width: 20rem;
-margin-top: 9rem;
-  }
+margin-top: 9rem;  }
 
   h4{
     font-size:1rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-family: Helvetica;
     font-weight: bold;
   }
 
   h1{
     font-size:2rem;
-    margin-left: 3rem;
-    margin-top: 0.25rem;
+    margin: 0 3rem ;
     font-weight: bold;
     font-family: Helvetica;
   }
@@ -57,12 +61,15 @@ margin-top: 9rem;
     margin: auto;
           }
 
-  nav ul {
+  nav .desktop-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem;
     list-style: none;
+  }
+  nav .mobile-nav {
+    display: none;
   }
 
 .products,
@@ -81,12 +88,11 @@ margin-top: 9rem;
 .product-image {
     border: 4px solid black;
     padding: 2rem;
-    height: 9rem;
-    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .description{
   display: block;
     background-color: black;
@@ -107,8 +113,75 @@ color: white;
 padding: 1rem 2rem;
   }
 
-footer{
+footer {
+
   height: 5rem;
   text-align: left;
   background-color: black;
+}
+
+footer .container {
+  height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1024px){
+  .products,{
+    width: 47%;
+  }
+
+  .info{
+  width: 35%;
+  color: black;
+    }
+nav .desktop-nav {
+  display: none;
+  align-items: center;
+justify-content: space-between;
+list-style: none;
+}
+  nav .mobile-nav{
+      display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+list-style: none;
+    }
+nav{
+  border: 3px solid firebrick;
+}
+}
+
+@media only screen and (max-width: 470px){
+
+.container{
+  height: 15rem;
+}
+
+  .text-box{
+    margin-top: 10rem;
+  }
+
+  h4{
+    margin-top: 1rem;
+  }
+
+  h1{
+    margin-left: 2rem;
+  }
+
+  .product,
+  .product-watch,
+  .product-glasses{
+    width: 90%;
+  }
+
+.container .detail{
+  margin-top: 0.5rem;
+}
+  .info{
+  width: 90%;
+  color: black;
+    }
 }
